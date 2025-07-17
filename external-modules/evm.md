@@ -18,6 +18,32 @@ The EVM module integrates the Ethereum Virtual Machine into KiiChain, enabling t
 - Access Ethereum account balances and nonces
 - Retrieve transaction receipts and logs
 
+## Usage Examples
+
+### Deploying a Smart Contract
+You can deploy a Solidity contract using tools like Hardhat or Remix. Example (using web3.js):
+
+```javascript
+const contract = new web3.eth.Contract(abi);
+const deployTx = contract.deploy({ data: bytecode });
+const receipt = await deployTx.send({ from: "0xYourAddress", gas: 3000000 });
+console.log("Contract deployed at:", receipt.options.address);
+```
+
+### Interacting with a Contract
+Call a contract function:
+
+```javascript
+const result = await contract.methods.myFunction(arg1, arg2).call();
+console.log(result);
+```
+
+Send a transaction to a contract:
+
+```javascript
+await contract.methods.myFunction(arg1, arg2).send({ from: "0xYourAddress" });
+```
+
 ## Reference
 - [cosmos/evm GitHub repository](https://github.com/cosmos/evm)
 - [KiiChain EVM integration](https://github.com/KiiChain/kiichain/tree/main/x/vm) 
