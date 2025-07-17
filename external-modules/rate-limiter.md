@@ -19,4 +19,3 @@ The Rate Limiter module provides IBC packet rate limiting for KiiChain. It helps
 
 ## Reference
 - [cosmos/ibc-apps rate-limiting module](https://github.com/cosmos/ibc-apps/tree/main/modules/rate-limiting)
-- [KiiChain rate limiter integration](https://github.com/KiiChain/kiichain/tree/main/x/ratelimiter) 
