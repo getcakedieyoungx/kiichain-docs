@@ -20,6 +20,31 @@ The ERC20 module provides support for ERC20 token standards within the EVM envir
 - Query token balances, allowances, and total supply
 - Retrieve token metadata (name, symbol, decimals)
 
+## Usage Examples
+
+### Querying Token Balance
+```javascript
+const balance = await erc20Contract.methods.balanceOf("0xYourAddress").call();
+console.log("Your balance:", balance);
+```
+
+### Transferring Tokens
+```javascript
+await erc20Contract.methods.transfer("0xRecipientAddress", 1000).send({ from: "0xYourAddress" });
+```
+
+### Approving and Transferring From
+```javascript
+await erc20Contract.methods.approve("0xSpenderAddress", 500).send({ from: "0xYourAddress" });
+await erc20Contract.methods.transferFrom("0xYourAddress", "0xRecipientAddress", 500).send({ from: "0xSpenderAddress" });
+```
+
+### Checking Allowance
+```javascript
+const allowance = await erc20Contract.methods.allowance("0xYourAddress", "0xSpenderAddress").call();
+console.log("Allowance:", allowance);
+```
+
 ## Reference
 - [cosmos/evm ERC20 implementation](https://github.com/cosmos/evm/tree/main/x/erc20)
 - [Ethereum ERC20 standard](https://eips.ethereum.org/EIPS/eip-20) 
