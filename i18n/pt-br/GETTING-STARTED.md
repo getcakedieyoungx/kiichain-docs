@@ -22,7 +22,9 @@ Configure uma carteira usando MetaMask ou Keplr para o Testnet Oro. É important
 ### Passo 1: Instale a Extensão MetaMask
 Acesse Metamask.io e baixe/instale a extensão do navegador. Certifique-se de que a extensão é oficial da MetaMask.
 
-<img width="1022" height="537" alt="image" src="https://github.com/user-attachments/assets/16d31c8f-e0fb-4c50-ac4b-a74bf37a7b80" />
+<img width="1208" height="607" alt="image" src="https://github.com/user-attachments/assets/9613d456-cb3a-4cf3-af64-7c9e2804a6cf" />
+
+
 
 
 ### Passo 2: Crie sua carteira
